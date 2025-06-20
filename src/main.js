@@ -107,7 +107,7 @@ function analyzeSalesData(data, options) {
 
         if (record.total_amount > 0) {
             const adjustmentFactor = receiptRevenue / record.total_amount;
-            seller.revenue -= totalItemsRevenue * (1 - adjustmentFactor);
+            seller.revenue += totalItemsRevenue * (1 - adjustmentFactor);
         }
     });
 
